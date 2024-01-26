@@ -2,12 +2,13 @@ import components.TiltablePanel;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.util.Arrays;
 
-public class KeyListener implements java.awt.event.KeyListener {
+public class InGameKeyListener implements java.awt.event.KeyListener {
 
     private final Display display;
 
-    public KeyListener(Display display){
+    public InGameKeyListener(Display display){
         this.display = display;
     }
 
@@ -18,13 +19,11 @@ public class KeyListener implements java.awt.event.KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-
+        System.out.println("key pressed event");
         if (e.getKeyCode() == KeyEvent.VK_W){
+            System.out.println("W key pressed");
             for (Component component : display.getComponents()){
-                if (component instanceof TiltablePanel tiltableComponent){
-                    tiltableComponent.tilt(0, 50);
-                    System.out.println("tilting");
-                }
+                System.out.println(component.getClass().getName());
             }
         }
     }

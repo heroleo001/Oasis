@@ -5,6 +5,17 @@ import javax.swing.*;
 public class TiltablePanel extends JPanel {
     private int horizontalTilt, verticalTilt;
 
+    /**
+     *
+     * @param x
+     * @param y
+     * @param width
+     * @param height
+     * @param horizontalTilt
+     * @param verticalTilt
+     *
+     * @Working: this adds the function to initially tilt the created object
+     */
     public void setBounds(int x, int y,
                           int width, int height,
                           int horizontalTilt, int verticalTilt) {
@@ -23,7 +34,7 @@ public class TiltablePanel extends JPanel {
      * @param horizontalAngle angle difference
      * @param verticalAngle angle difference
      *
-     *                      tilts the object
+     *  @Actoins: tilts the object
      */
     public void tilt(int horizontalAngle, int verticalAngle){
         setBounds(getX(), getY(), getWidth(), getHeight(), getHorizontalTilt() + horizontalAngle, getVerticalTilt() + verticalAngle);
